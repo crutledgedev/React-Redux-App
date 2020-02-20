@@ -13,6 +13,6 @@ export const getBeer = () => dispatch => {
       dispatch({ type: FETCH_BREW_SUCCESS, payload: res.data })
     })
     .catch(err => {
-      dispatch({ type: FETCH_BREW_START, payload: err.response })
+      dispatch({ type: FETCH_BREW_FAILURE, payload: err.response })
     })
 }
