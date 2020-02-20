@@ -1,6 +1,8 @@
 import React from 'react';
 import Loader from 'react-loader-spinner';
 import BrewCard from './BrewCard';
+// import Button from '@material-ui/core/Button';
+
 
 // redux
 import { connect } from 'react-redux';
@@ -11,7 +13,7 @@ const BrewList = props => {
   return (
     <div>
       <h1>Local Brews</h1>
-      {/* {!props.state && !props.isFetching && <p>Go ahead! Fetch a brew!</p>}
+      {!props.state && !props.isFetching && <p>Go ahead! Fetch a brew!</p>}
       {props.isFetching && (
         <Loader
           type="Puff"
@@ -19,7 +21,7 @@ const BrewList = props => {
           height={100}
           width={100}
         />
-      )} */}
+      )}
       {props.state.map(item => (
         <BrewCard 
             key={item.id} 
@@ -30,6 +32,7 @@ const BrewList = props => {
             />
       ))}
       <button onClick={props.getBeer}>List of Breweries!</button>
+      {/* <Button variant="contained" color="secondary">Choose Your State</Button> */}
     </div>
   )
 }
